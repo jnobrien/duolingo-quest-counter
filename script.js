@@ -11,7 +11,12 @@ function daysLeft() {
 daysLeft();
 
 function questsLeft() {
+    const requiredQuests = document.getElementById('required-total').value;
     const questsDone = document.getElementById('current-total').value;
-    const questsLeft = 100 - questsDone;
+    const questsLeft = requiredQuests - questsDone;
     document.getElementById('quests-left').innerText = questsLeft;
+};
+
+function calculate() {
+    questsLeft();
 };

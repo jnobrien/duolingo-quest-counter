@@ -8,12 +8,16 @@
 </head>
 <body>
     <form>
+        <label for="required-total">Required number of quests:</label>
+        <input type="number" id="required-total" name="required-total">
         <label for="current-total">Current number of completed quests:</label>
         <input type="number" id="current-total" name="current-total">
-        <button type="button" onclick="questsLeft()">Calculate</button>
+        <button type="button" onclick="calculate()">Calculate</button>
     </form>
-    <p>Quests remaining: <span id="quests-left"></span></p>
     <p>Days remaining: <span id="days-left"></span></p>
+    <p>Quests remaining: <span id="quests-left"></span></p>
+    <p>Average quests to complete per day: <span id="avg-quests"></span></p>
+    <p>Minimum number of days to complete quests: <span id="min-days"></span></p>
 
     <script src="script.js"></script>
 </body>
