@@ -6,6 +6,12 @@ function daysLeft() {
     const daysInMonth = (year, month) => new Date(year, month, 0).getDate();
     const daysLeft = daysInMonth(year, month) - today;
     document.getElementById('days-left').innerText = daysLeft;
-}
+};
 
-daysLeft()
+daysLeft();
+
+function questsLeft() {
+    const questsDone = document.getElementById('current-total').value;
+    const questsLeft = 100 - questsDone;
+    document.getElementById('quests-left').innerText = questsLeft;
+};
